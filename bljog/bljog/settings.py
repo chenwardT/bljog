@@ -84,7 +84,7 @@ DATABASES = {
         'NAME': 'bljog',
         'HOST': 'localhost',
         'USER': 'chen',
-        'PASSWORD': os.environ['DB_PASS'],
+        'PASSWORD': os.environ['PG_PASS'],
     }
 }
 
