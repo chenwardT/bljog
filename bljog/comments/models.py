@@ -12,3 +12,6 @@ class Comment(models.Model):
     content_type = models.ForeignKey(ContentType)
     object_id = models.PositiveIntegerField()
     content_object = generic.GenericForeignKey()
+
+    def __str__(self):
+        return self.body
