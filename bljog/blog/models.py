@@ -16,6 +16,7 @@ class Post(models.Model):
     comments = GenericRelation(Comment)
     created = models.DateTimeField(auto_now_add=True)
     modified = models.DateTimeField(auto_now=True)
+    published = models.BooleanField(default=False)
 
     def __str__(self):
         return self.title
