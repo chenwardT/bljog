@@ -6,5 +6,7 @@ urlpatterns = [
     # url(r'^$', 'bljog.views.home', name='home'),
     # url(r'^blog/', include('blog.urls')),
 
+    url(r'^$', 'core.views.index', name='index'),
+
     url(r'^admin/', include(admin.site.urls)),
 ]
