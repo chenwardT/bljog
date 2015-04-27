@@ -3,6 +3,7 @@ from django.conf import settings
 from django.contrib.contenttypes.fields import GenericRelation
 from autoslug import AutoSlugField
 
+from .managers import PostManager
 from comments.models import Comment
 
 User = settings.AUTH_USER_MODEL
@@ -17,6 +18,8 @@ class Post(models.Model):
     created = models.DateTimeField(auto_now_add=True)
     modified = models.DateTimeField(auto_now=True)
     published = models.BooleanField(default=False)
+
+    objects = PostManager()
 
     def __str__(self):
         return self.title
